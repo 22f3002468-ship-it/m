@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/metrics")
+@app.post("/")
 async def latency_metrics(req: Request):
     body = await req.json()
     regions = body["regions"]
